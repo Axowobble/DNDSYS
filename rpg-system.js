@@ -4,8 +4,8 @@
  */
 
 // Configuration
-const REPO_OWNER = ''; // <--- CHANGE THIS
-const REPO_NAME = '';       // <--- CHANGE THIS
+const REPO_OWNER = 'Axowobble'; // <--- CHANGE THIS
+const REPO_NAME = 'DNDSYS';       // <--- CHANGE THIS
 const FILE_PATH = 'players.json';
 
 // D&D 5e XP Table (Level 1 - 20)

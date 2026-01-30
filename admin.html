@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dungeon Master Console</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #1a1a1a; background-image: url("https://www.transparenttextures.com/patterns/dark-leather.png"); }
+    </style>
+</head>
+<body class="text-gray-200 min-h-screen">
+
+    <nav class="bg-gray-900 border-b border-yellow-700 p-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-yellow-500">🛡️ DM Console</h1>
+            <div>
+                <a href="index.html" class="text-gray-400 hover:text-yellow-500 mr-4">Dashboard</a>
+                <a href="admin.html" class="text-white font-bold hover:text-yellow-500">Admin</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto p-4 mt-8">
+        
+        <div class="bg-gray-800 p-6 rounded-lg border border-gray-700 mb-8 shadow-lg">
+            <h3 class="text-xl text-yellow-500 mb-4 border-b border-gray-700 pb-2">Recruit New Adventurer</h3>
+            <div class="flex gap-4 flex-col md:flex-row">
+                <input id="new-name" type="text" placeholder="Character Name" class="flex-1 bg-gray-900 border border-gray-600 p-3 rounded text-white">
+                <input id="new-class" type="text" placeholder="Class (e.g. Rogue)" class="flex-1 bg-gray-900 border border-gray-600 p-3 rounded text-white">
+                <button onclick="createPlayer()" class="bg-green-700 hover:bg-green-600 text-white font-bold py-3 px-6 rounded shadow">Add Player</button>
+            </div>
+        </div>
+
+        <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden border border-gray-700">
+            <table class="w-full text-left border-collapse">
+                <thead class="bg-gray-900 text-yellow-600 uppercase text-sm">
+                    <tr>
+                        <th class="p-4">Name</th>
+                        <th class="p-4">Class</th>
+                        <th class="p-4">Lvl</th>
+                        <th class="p-4 text-right">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="admin-tbody" class="divide-y divide-gray-700">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="rpg-system.js"></script>
+</body>
+</html>
